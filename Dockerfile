@@ -5,7 +5,7 @@ EXPOSE 80/tcp
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["chillapp.csproj", "./"]
+COPY ["project.csproj", "./"]
 RUN dotnet restore "project.csproj"
 COPY . .
 WORKDIR "/src/."
